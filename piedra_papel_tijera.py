@@ -1,39 +1,30 @@
 import random
-eleccion = int(input("elige piedra(1),papel(2) o tijera(3): "))
-
-if eleccion == 1 or eleccion == 2 or eleccion == 3:
-    if eleccion == 1:
-        print("Tú elegiste: piedra")
-    elif eleccion == 2:
-        print("Tú elegiste: papel")
-    elif eleccion == 3:
-        print("Tú elegiste: tijera")
-     
+opcion = int(input("elige piedra(1),papel(2) o tijera(3): "))
+eleccion = ["piedra","papel","tijera"]
+print("Tú elegiste: " + eleccion[opcion - 1])
 
      
-    aleatorio = random.randrange(1,4)
-    if aleatorio == 1:
-        print("Computadora eligió: piedra")
-    elif aleatorio == 2:
-        print("Computadora eligió: papel")
-    elif aleatorio == 3:
-        print("Computadora eligió: tijera")
+aleatorio = random.randrange(1,4)
+print("La Computadora eligio: " + eleccion[aleatorio - 1])
+
     
-
-    if eleccion == 1 and aleatorio == 3:
+if opcion == 1 or opcion == 2 or opcion == 3:
+    if opcion == 1 and aleatorio == 3:
         resultado = "¡Ganaste!"
-    elif eleccion == 2 and aleatorio == 1:
+    elif opcion == 2 and aleatorio == 1:
         resultado = "¡Ganaste!"
-    elif eleccion == 3 and aleatorio == 2:
+    elif opcion == 3 and aleatorio == 2:
         resultado = "¡Ganaste!"
-    elif eleccion == 3 and aleatorio == 1:
+    elif opcion == 3 and aleatorio == 1:
         resultado = "¡Perdiste!"
-    elif eleccion == 1 and aleatorio == 2:
+    elif opcion == 1 and aleatorio == 2:
         resultado = "¡Perdiste!"
-    elif eleccion == 2 and aleatorio == 3:
+    elif opcion == 2 and aleatorio == 3:
         resultado = "¡Perdiste!"
     else:
         resultado = "¡Empate!"
     print(resultado)
+    
+    
 else:
     print("¡Opcion no valida!")
