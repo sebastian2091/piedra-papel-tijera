@@ -21,18 +21,19 @@ if eleccion == 1 or eleccion == 2 or eleccion == 3:
     
 
     if eleccion == 1 and aleatorio == 3:
-        print("¡Ganaste!")
+        resultado = "¡Ganaste!"
     elif eleccion == 2 and aleatorio == 1:
-        print("¡Ganaste!")
+        resultado = "¡Ganaste!"
     elif eleccion == 3 and aleatorio == 2:
-        print("¡Ganaste!")
+        resultado = "¡Ganaste!"
     elif eleccion == 3 and aleatorio == 1:
-        print("¡Perdiste!")
+        resultado = "¡Perdiste!"
     elif eleccion == 1 and aleatorio == 2:
-            print("¡Perdiste!")
+        resultado = "¡Perdiste!"
     elif eleccion == 2 and aleatorio == 3:
-            print("¡Perdiste!")
+        resultado = "¡Perdiste!"
     else:
-        print("¡Empate!")
+        resultado = "¡Empate!"
+    print(resultado)
 else:
     print("¡Opcion no valida!")
